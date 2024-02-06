@@ -1,63 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Game</title>
+    <title>Random Facts Generator</title>
     <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <header style="background-color: #222;padding: 10px;" onclick="this.style.display = 'none'">
-        <h1 style="font-size: 14px; font-weight: lighter; color: whitesmoke;">Current Level : <span id="lvl" style="color: white;"></span></h1>
-    </header>
     <nav>
-        <h1>Math Game</h1>
-        <div class="settings">
-            <div>
-                <button id="lvlBtn">Select Level</button>
-                <ul id="lvl">
-                    <li onclick="changeLvl('beginner')">Beginner</li>
-                    <li onclick="changeLvl('intermediate')">Intermediate</li>
-                    <li onclick="changeLvl('advanced')">Advanced</li>
-                </ul>
-            </div>
-            <div>
-                <button id="oprBtn">Select Operator</button>
-                <ul id="opr">
-                    <li onclick="changeOpr('Add')">Addition</li>
-                    <li onclick="changeOpr('Sub')">Subtraction</li>
-                    <li onclick="changeOpr('Multiply')">Multiplication</li>
-                    <li onclick="changeOpr('Divide')">Division</li>
-                </ul>
-            </div>
-        </div>
+        <h1>Random Fact Generator</h1>
     </nav>
-    <div style="padding: 20px;">
+    <div class="outer-div" style="padding: 10px;">
         <div class="container">
-            <div class="game">
-                <h2 id="num1">5</h2>
-                <h2 id="operator">*</h2>
-                <h2 id="num2">3</h2>
+            <h1>Generate a random Fact</h1>
+            <div class="i" id="spinner" style="display: none;">
+                <div></div>
+                <div></div>
+              </div>
+            <ol id="ol">
+            </ol>
+            <div class="div">
+                <input type="number" placeholder="Limit" id="limit">
+                <button onclick="call()">Generate</button>
             </div>
-            <div class="input">
-                <input type="text" placeholder="Enter Your Answer" id="ans">
-                <i class="fa fa-check" onclick="submit(this)"></i>
-            </div>
-        </div>
-        <div class="container" style="margin: 20px auto; padding: 0; display: flex;">
-            <i class="fa fa-clock" style="color: royalblue; font-size: 20px; padding: 15px; border-right: 1px solid royalblue;"></i>
-            <h1 style="width: 80%; display: flex; align-items: center; justify-content: center; font-weight: lighter; color: white; font-size: 26px;" id="timer">00:00</h1>
         </div>
     </div>
-    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-    <script src='sweetalert2.all.min.js'></script>
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
-
 </html>
