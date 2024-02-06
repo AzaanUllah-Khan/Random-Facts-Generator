@@ -1,35 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
 :root {
-    --primary-color: #6A5ACDFF; /* Slate Blue */
-    --secondary-color: #B0C4DEFF; /* Light Steel Blue */
-    --button-color: #F08080FF; /* Light Coral */
-    --background-color: rgba(255, 255, 255, 0.3); /* White with opacity */
-    --text-color: #000000FF; /* Black */
-    --shadow-color: #6A5ACDFF; /* Slate Blue */
+    --primary-color: #6A5ACDFF;
+    /* Slate Blue */
+    --secondary-color: #B0C4DEFF;
+    /* Light Steel Blue */
+    --button-color: #F08080FF;
+    /* Light Coral */
+    --background-color: rgba(255, 255, 255, 0.3);
+    /* White with opacity */
+    --text-color: #000000FF;
+    /* Black */
+    --shadow-color: #6A5ACDFF;
+    /* Slate Blue */
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: var(--primary-color);
 }
-nav{
+
+nav {
     background-color: var(--secondary-color);
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-nav h1{
+
+nav h1 {
     color: var(--text-color);
     font-size: 25px;
 }
-.container{
+
+.container {
     margin: 75px auto 0;
     padding: 20px 15px;
     max-width: 500px;
@@ -37,30 +47,35 @@ nav h1{
     background-color: var(--background-color);
     border-radius: 20px;
 }
-.container h1{
+
+.container h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.container ol{
+
+.container ol {
     margin: 10px 0;
     list-style: none;
     gap: 5px;
     display: flex;
     flex-direction: column
 }
-.container ol li{
+
+.container ol li {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--background-color);
 }
-.container .div{
+
+.container .div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
 }
-.container .div input{
+
+.container .div input {
     padding: 7px;
     width: 50%;
     outline: none;
@@ -68,7 +83,8 @@ nav h1{
     border-radius: 10px;
     background-color: var(--background-color);
 }
-.container .div button{
+
+.container .div button {
     width: 35%;
     padding: 7px;
     outline: none;
@@ -80,81 +96,100 @@ nav h1{
     transition: .25s ease-in-out;
     box-shadow: 0 0 0 0 var(--shadow-color);
 }
-.container .div button:hover{
+
+.container .div button:hover {
     box-shadow: 3px 3px 0 1px rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
 }
+
 .i {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
-  }
-  .i div {
+}
+
+.i div {
     position: absolute;
     border: 4px solid #fff;
     opacity: 1;
     border-radius: 50%;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  }
-  .i div:nth-child(2) {
+}
+
+.i div:nth-child(2) {
     animation-delay: -0.5s;
-  }
-  @keyframes lds-ripple {
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes lds-ripple {
     0% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 0;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
+
     4.9% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 0;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
+
     5% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 1;
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
     }
+
     100% {
-      top: 0px;
-      left: 0px;
-      width: 72px;
-      height: 72px;
-      opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
     }
-  }  
+}
 
 @media screen and (max-width: 500px) {
-    nav{
+    nav {
         flex-direction: column;
         gap: 10px;
     }
-    nav .settings ul{
+
+    nav .settings ul {
         transform-origin: top;
     }
-    header h1{
+
+    header h1 {
         text-align: center;
     }
 }
+
 @media screen and (max-width: 280px) {
-    .container .div{
+    .container .div {
         flex-direction: column;
         gap: 10px;
     }
-    .container .div input{
+
+    .container .div input {
         width: 100%;
     }
-    .container .div button{
+
+    .container .div button {
         width: 100%;
     }
-    nav h1{
+
+    nav h1 {
         font-size: 20px;
     }
 }
